@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HotspotOS</string>
+    <style name="Theme.HotspotApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#00e5a0</item>
+        <item name="colorPrimaryVariant">#0077ff</item>
+        <item name="colorOnPrimary">#0a0f1a</item>
+        <item name="android:windowBackground">#0a0f1a</item>
+        <item name="android:statusBarColor">#0e1824</item>
+    </style>
+</resources>

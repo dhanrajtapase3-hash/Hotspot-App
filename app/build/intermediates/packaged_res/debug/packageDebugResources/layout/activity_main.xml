@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0a0f1a">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical" android:background="#0e1824">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="HotspotOS" android:textColor="#ffffff"
+            android:textSize="20sp" android:textStyle="bold"/>
+        <Switch android:id="@+id/hotspotSwitch" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Hotspot"
+            android:textColor="#00e5a0" android:thumbTint="#00e5a0" android:trackTint="#1e2d3d"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:background="#0e1824" android:layout_marginTop="1dp">
+        <TextView android:id="@+id/tabDashboard" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Dashboard" android:textColor="#00e5a0" android:textSize="12sp"
+            android:gravity="center" android:padding="8dp"/>
+        <TextView android:id="@+id/tabDevices" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Devices" android:textColor="#4a6880" android:textSize="12sp"
+            android:gravity="center" android:padding="8dp"/>
+        <TextView android:id="@+id/tabStats" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Stats" android:textColor="#4a6880" android:textSize="12sp"
+            android:gravity="center" android:padding="8dp"/>
+        <TextView android:id="@+id/tabSettings" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Settings" android:textColor="#4a6880" android:textSize="12sp"
+            android:gravity="center" android:padding="8dp"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:padding="12dp">
+        <LinearLayout android:id="@+id/contentArea" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+            <LinearLayout android:id="@+id/panelDashboard" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:background="#0e1824"
+                    android:padding="16dp" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="TOTAL DATA USED" android:textColor="#3a5568" android:textSize="10sp"/>
+                    <TextView android:id="@+id/totalUsed" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0 MB"
+                        android:textColor="#00e5a0" android:textSize="32sp" android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+                    <ProgressBar android:id="@+id/totalProgress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent" android:layout_height="6dp"
+                        android:layout_marginTop="8dp" android:progressTint="#00e5a0"
+                        android:progressBackgroundTint="#1e2d3d" android:max="100" android:progress="0"/>
+                    <TextView android:id="@+id/totalLimitText" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="Limit: 5 GB"
+                        android:textColor="#4a6880" android:textSize="11sp" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical"
+                        android:background="#0e1824" android:padding="14dp" android:layout_marginEnd="5dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Connected" android:textColor="#4a6880" android:textSize="10sp"/>
+                        <TextView android:id="@+id/connectedCount" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0"
+                            android:textColor="#00e5a0" android:textSize="28sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="devices" android:textColor="#4a6880" android:textSize="10sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical"
+                        android:background="#0e1824" android:padding="14dp" android:layout_marginStart="5dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="SSID" android:textColor="#4a6880" android:textSize="10sp"/>
+                        <TextView android:id="@+id/ssidDisplay" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="---"
+                            android:textColor="#ffffff" android:textSize="14sp" android:textStyle="bold"
+                            android:layout_marginTop="4dp" android:maxLines="1" android:ellipsize="end"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/deviceList"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/panelDevices" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Connected Devices" android:textColor="#ffffff"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/deviceListFull"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/panelStats" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Usage Stats" android:textColor="#ffffff"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+                <TextView android:id="@+id/statsText" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="#8899aa"
+                    android:textSize="13sp" android:background="#0e1824"
+                    android:padding="16dp" android:lineSpacingExtra="6dp"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/panelSettings" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Hotspot Settings" android:textColor="#ffffff"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:background="#0e1824"
+                    android:padding="16dp" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="HOTSPOT NAME" android:textColor="#3a5568"
+                        android:textSize="10sp" android:layout_marginBottom="6dp"/>
+                    <EditText android:id="@+id/ssidInput" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:hint="Hotspot name"
+                        android:textColor="#e0e8f0" android:textColorHint="#3a5568"
+                        android:background="#111c2a" android:padding="10dp"
+                        android:layout_marginBottom="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="PASSWORD" android:textColor="#3a5568"
+                        android:textSize="10sp" android:layout_marginBottom="6dp"/>
+                    <EditText android:id="@+id/passwordInput" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:hint="Password"
+                        android:inputType="textPassword" android:textColor="#e0e8f0"
+                        android:textColorHint="#3a5568" android:background="#111c2a"
+                        android:padding="10dp" android:layout_marginBottom="12dp"/>
+                    <Button android:id="@+id/applySettingsBtn" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="Apply Settings"
+                        android:backgroundTint="#00e5a0" android:textColor="#0a0f1a"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:background="#0e1824" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="DATA LIMIT (MB)" android:textColor="#3a5568"
+                        android:textSize="10sp" android:layout_marginBottom="6dp"/>
+                    <EditText android:id="@+id/limitInput" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:hint="e.g. 5120"
+                        android:inputType="number" android:textColor="#e0e8f0"
+                        android:textColorHint="#3a5568" android:background="#111c2a"
+                        android:padding="10dp" android:layout_marginBottom="12dp"/>
+                    <Button android:id="@+id/applyLimitBtn" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="Set Limit"
+                        android:backgroundTint="#0077ff" android:textColor="#ffffff"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

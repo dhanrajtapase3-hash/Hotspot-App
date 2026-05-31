@@ -1,0 +1,101 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.raj.hotspot"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+11-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:3:5-75
+11-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:3:22-73
+12    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+12-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:4:5-75
+12-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:4:22-73
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:5:5-78
+13-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:5:22-76
+14    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+14-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:6:5-78
+14-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:6:22-76
+15    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+15-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:7:5-74
+15-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:7:22-72
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+16-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:8:5-76
+16-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:8:22-74
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:9:5-66
+17-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:9:22-64
+18
+19    <permission
+19-->[androidx.core:core:1.9.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/fc984ccb81852505a9436bb175c52ce8/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+20        android:name="com.raj.hotspot.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+20-->[androidx.core:core:1.9.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/fc984ccb81852505a9436bb175c52ce8/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+21        android:protectionLevel="signature" />
+21-->[androidx.core:core:1.9.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/fc984ccb81852505a9436bb175c52ce8/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+22
+23    <uses-permission android:name="com.raj.hotspot.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+23-->[androidx.core:core:1.9.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/fc984ccb81852505a9436bb175c52ce8/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+23-->[androidx.core:core:1.9.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/fc984ccb81852505a9436bb175c52ce8/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+24
+25    <application
+25-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:10:5-24:19
+26        android:allowBackup="true"
+26-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:11:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.9.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/fc984ccb81852505a9436bb175c52ce8/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:label="HotspotOS"
+30-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:12:9-34
+31        android:supportsRtl="true"
+31-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:14:9-35
+32        android:theme="@style/Theme.HotspotApp" >
+32-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:13:9-48
+33        <activity
+33-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:15:9-23:20
+34            android:name="com.raj.hotspot.MainActivity"
+34-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:16:13-41
+35            android:exported="true"
+35-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:17:13-36
+36            android:screenOrientation="portrait" >
+36-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:18:13-49
+37            <intent-filter>
+37-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:19:13-22:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:20:17-68
+38-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:20:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:21:17-76
+40-->/data/data/com.termux/files/home/HotspotApp/app/src/main/AndroidManifest.xml:21:27-74
+41            </intent-filter>
+42        </activity>
+43
+44        <provider
+44-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/9245cd0e12db1547845d0c5a2b884f52/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+45            android:name="androidx.startup.InitializationProvider"
+45-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/9245cd0e12db1547845d0c5a2b884f52/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+46            android:authorities="com.raj.hotspot.androidx-startup"
+46-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/9245cd0e12db1547845d0c5a2b884f52/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+47            android:exported="false" >
+47-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/9245cd0e12db1547845d0c5a2b884f52/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+48            <meta-data
+48-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/9245cd0e12db1547845d0c5a2b884f52/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+49                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+49-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/9245cd0e12db1547845d0c5a2b884f52/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+50                android:value="androidx.startup" />
+50-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/9245cd0e12db1547845d0c5a2b884f52/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+51            <meta-data
+51-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/96291309c92909940a8e02c13412e4bd/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+52                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+52-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/96291309c92909940a8e02c13412e4bd/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+53                android:value="androidx.startup" />
+53-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/96291309c92909940a8e02c13412e4bd/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+54        </provider>
+55    </application>
+56
+57</manifest>
