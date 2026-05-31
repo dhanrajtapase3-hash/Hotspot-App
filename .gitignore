@@ -1,0 +1,13 @@
+.gradle/
+build/
+app/build/
+*.bin
+*.lock
+Cannot
+Configure
+Could
+Execution
+Get
+Run
+Task
+AAPT2
